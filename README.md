@@ -2,7 +2,7 @@
 
 # NEXUS Intercom
 
-### La matrice di regia, smaterializzata.
+### La matrice di regia, virtualizzata.
 
 **L'intercom broadcast professionale — TALK, LISTEN, partyline, IFB e fino a 16 N-1 differenziati — su iPhone, iPad e Mac.**
 
@@ -30,7 +30,7 @@ Ogni talent ha il suo ritorno: il program meno la propria voce. NEXUS pesca ogni
 ![Assegnazione N-1 da un canale di una scheda audio](assets/nminus.png)
 
 ### La postazione è un link
-La regia genera un invito per una postazione — un QR o un link firmato a scadenza — e chi lo riceve apre l'intercom sul telefono. Nessun account, nessuna installazione. Beltpack in tasca: push-to-talk, volume in cuffia, mute d'ascolto.
+La regia genera un invito per una postazione — un QR o un link firmato a scadenza — e chi lo riceve apre l'intercom sul telefono. Nessun account, nessuna installazione. Beltpack in tasca: push-to-talk, volume in cuffia, silenzia ascolto.
 
 <p>
   <img src="assets/invito.png" width="60%" alt="Invito con QR a scadenza" />
