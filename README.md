@@ -25,11 +25,11 @@ Un intercom di regia serio è una **matrice di crosspoint**: chi parla con chi, 
 ## Funzioni principali
 
 ### Fino a 16 N-1 differenziati, da qualunque scheda audio collegata
-Ogni talent ha il suo ritorno: il program meno la propria voce. NEXUS pesca ogni N-1 da un canale distinto di qualunque scheda audio con ingressi collegata al dispositivo — per esempio una Dante Virtual Soundcard — fino a sedici circuiti indipendenti. Si assegna con un tocco.
+Ogni talent ha il suo ritorno: il program meno la propria voce. NEXUS pesca ogni N-1 da un canale distinto di qualunque scheda audio con ingressi, collegata al dispositivo — per esempio una Dante Virtual Soundcard — fino a sedici circuiti indipendenti. Si assegna con un tocco.
 
 ![Assegnazione N-1 da un canale di una scheda audio](assets/nminus.png)
 
-### La porta è un link
+### La postazione è un link
 La regia genera un invito per una postazione — un QR o un link firmato a scadenza — e chi lo riceve apre l'intercom sul telefono. Nessun account, nessuna installazione. Beltpack in tasca: push-to-talk, volume in cuffia, mute d'ascolto.
 
 <p>
@@ -50,7 +50,7 @@ Rinomini le etichette al volo («CAM 2» → «Camera 2 · Regia»), monti party
 |---|---|
 | **iPhone** — il beltpack | Push-to-talk in tasca per operatori, inviati e conduttori. Entra da un link, funziona anche a schermo bloccato. |
 | **iPad** — il panel | La matrice completa a portata di dito, per regia mobile e postazioni tecniche. |
-| **Mac** — la centrale | La regia possiede la matrice e i circuiti N-1 dalla scheda Dante. Il cuore che invita e instrada tutte le porte. |
+| **Mac** — la centrale | La regia possiede la matrice e i circuiti N-1 dalla scheda audio. Il cuore che invita e instrada tutte le postazioni. |
 
 ---
 
