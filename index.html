@@ -11,10 +11,17 @@
 <meta property="og:type" content="website" />
 <meta property="og:image" content="assets/console.png" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2308090b'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%233fd7ea'/%3E%3C/svg%3E" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
+  /* Font OSPITATI SUL SITO (no Google CDN): niente terze parti, niente
+     trasferimento dell'IP del visitatore — pagina GDPR-safe by design. */
+  @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/Inter-400.woff2) format('woff2');}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/Inter-500.woff2) format('woff2');}
+  @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/Inter-600.woff2) format('woff2');}
+  @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/JetBrainsMono-500.woff2) format('woff2');}
+  @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/JetBrainsMono-700.woff2) format('woff2');}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/SpaceGrotesk-500.woff2) format('woff2');}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/SpaceGrotesk-600.woff2) format('woff2');}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/SpaceGrotesk-700.woff2) format('woff2');}
   :root {
     --void: #08090b;
     --void-2: #0b0d10;
@@ -74,6 +81,12 @@
   .hero { position: relative; padding: 96px 0 70px; overflow: hidden; }
   #xpoint { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.5; }
   .hero-in { position: relative; z-index: 1; }
+  .hero-top { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .beta {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+    color: var(--green); border: 1px solid rgba(48,209,88,0.4); border-radius: 6px; padding: 5px 10px;
+    background: rgba(48,209,88,0.06);
+  }
   .hero h1 { font-size: clamp(40px, 8vw, 82px); margin: 20px 0 22px; }
   .hero h1 .glow { color: var(--cyan); }
   .hero .lede { font-size: clamp(17px, 2.4vw, 22px); color: var(--dim); max-width: 660px; }
@@ -167,6 +180,8 @@
 
   footer { border-top: 1px solid var(--line); padding: 34px 0; }
   .foot-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: 'JetBrains Mono'; font-size: 12px; color: var(--dim-2); }
+  .foot-priv { color: var(--dim); text-align: center; flex: 1 1 auto; }
+  @media (max-width: 680px){ .foot-priv { order: 3; flex-basis: 100%; text-align: left; } }
 
   .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1); }
   .reveal.in { opacity: 1; transform: none; }
@@ -194,7 +209,10 @@
 <header class="hero">
   <canvas id="xpoint"></canvas>
   <div class="wrap hero-in">
-    <div class="eyebrow reveal">Intercom broadcast · iOS · iPadOS · macOS</div>
+    <div class="hero-top reveal">
+      <span class="eyebrow">Intercom broadcast · iOS · iPadOS · macOS</span>
+      <span class="beta">● BETA · IN TEST SU TESTFLIGHT</span>
+    </div>
     <h1 class="reveal">La matrice di regia,<br><span class="glow">smaterializzata.</span></h1>
     <p class="lede reveal">TALK, LISTEN, partyline, IFB e fino a <b>16 N-1 differenziati</b>. La matrice intercom di una regia broadcast — su iPhone, iPad e Mac. La regia invita una postazione con un link: <b>entra in tre secondi</b>, senza installare nulla.</p>
     <div class="spec-row reveal">
@@ -330,13 +348,14 @@
     <div class="eyebrow reveal" style="justify-content:center;display:block;text-align:center">Made for broadcast</div>
     <h2 class="reveal" style="margin-top:14px">L'intercom della regia,<br>ovunque vada la produzione.</h2>
     <p class="reveal">La matrice resta in regia. Le voci vanno dove serve.</p>
-    <div class="avail reveal">DISPONIBILE PER iPHONE · iPAD · MAC</div>
+    <div class="avail reveal">iPHONE · iPAD · MAC — <span style="color:var(--green)">BETA SU TESTFLIGHT</span></div>
   </div>
 </section>
 
 <footer>
   <div class="wrap foot-in">
-    <span>NEXUS INTERCOM</span>
+    <span>NEXUS INTERCOM · in test su TestFlight</span>
+    <span class="foot-priv">Sito informativo — nessun cookie, nessun tracciamento, nessun dato raccolto.</span>
     <span>© 2026 Daniele Cappello</span>
   </div>
 </footer>
